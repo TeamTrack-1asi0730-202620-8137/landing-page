@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rodante — Mantenimiento preventivo para flotas de carga</title>
+<meta name="description" content="Rodante conecta el checklist diario del conductor con las alertas de mantenimiento del jefe de flota, para que ninguna falla te tome por sorpresa en ruta.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%231E5AA8'/%3E%3Cpolyline points='11,21 17,28 30,12' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a href="#top" class="logo" aria-label="Rodante - inicio">
+      <span class="logo-mark">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 12 9 18 20 5"></polyline></svg>
+      </span>
+      <span>Rodante</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Principal">
+      <a href="#producto">Producto</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#planes">Planes</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="app/index.html#/login" class="btn btn-outline btn-sm">Iniciar sesión</a>
+      <a href="#contacto" class="btn btn-primary btn-sm">Solicitar demo</a>
+    </div>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="badge badge-green">Nuevo · SaaS de mantenimiento preventivo</span>
+        <h1>Anticípate a las averías de tu flota antes de que ocurran en ruta</h1>
+        <p class="lead">Rodante conecta el checklist diario del conductor con las alertas de mantenimiento del jefe de flota, para que ninguna falla te tome por sorpresa.</p>
+        <div class="hero-cta">
+          <a href="#contacto" class="btn btn-primary">Solicitar demo</a>
+          <a href="#como-funciona" class="btn btn-outline">Ver cómo funciona</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <h3>18%</h3>
+            <p>Disponibilidad ↑</p>
+          </div>
+          <div class="stat">
+            <h3>15%</h3>
+            <p>Costos ↓</p>
+          </div>
+          <div class="stat">
+            <h3>12%</h3>
+            <p>Fallas ↓</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="chart-card">
+          <svg viewBox="0 0 200 100" aria-label="Vista previa del dashboard de Rodante" role="img">
+            <polyline points="0,80 25,80 40,55 55,65 70,20 90,45 110,30 130,50 150,25 200,25" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.9"></polyline>
+          </svg>
+        </div>
+        <div class="status-card">
+          <p class="status-title">Estado de la flota</p>
+          <div class="status-legend">
+            <span><i class="dot dot-green"></i>Bueno</span>
+            <span><i class="dot dot-orange"></i>Alerta</span>
+            <span><i class="dot dot-red"></i>Crítico</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE RODANTE -->
+  <section class="section section-alt" id="nosotros">
+    <div class="container">
+      <div class="about-head">
+        <p class="eyebrow">— Conócenos</p>
+        <h2>Somos Rodante</h2>
+        <p class="about-lead">Team Track nace para anticiparse a la falla: Rodante da a las pequeñas empresas de transporte de carga ligera un registro centralizado y confiable del desgaste de cada unidad de su flota.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="fact-card">
+          <p class="fact-num fact-red">40%</p>
+          <p class="fact-text">de la flota de carga activa del Perú opera en tramo de penalización</p>
+          <p class="fact-source">Mordor Intelligence, 2026</p>
+        </div>
+        <div class="fact-card">
+          <p class="fact-num fact-orange">488</p>
+          <p class="fact-text">accidentes de tránsito en 2023 causados por fallas mecánicas</p>
+          <p class="fact-source">Falla Carrillo, 2024</p>
+        </div>
+        <div class="fact-card">
+          <p class="fact-num fact-blue">66.66%</p>
+          <p class="fact-text">de pymes de logística aún con transformación digital básica</p>
+          <p class="fact-source">Rojas García et al., 2023</p>
+        </div>
+      </div>
+
+      <div class="founders" id="equipo">
+        <p class="founders-label">Equipo fundador</p>
+        <ul class="founders-list">
+          <li><span class="avatar avatar-blue">FD</span>Fernanda Díaz Vargas</li>
+          <li><span class="avatar avatar-green">MR</span>Matthias Romero Véliz</li>
+          <li><span class="avatar avatar-orange">SE</span>Santiago Echevarría Lizana</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNCIONALIDADES -->
+  <section class="section" id="producto">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">— Lo que ofrecemos</p>
+        <h2>Todo lo que necesita tu flota</h2>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="icon-badge icon-blue">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1E5AA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="8 12.5 11 15.5 16 9"></polyline></svg>
+          </div>
+          <h3>Checklist de salida</h3>
+          <p>El conductor revisa el vehículo en segundos antes de cada ruta, sin papeleo.</p>
+        </div>
+        <div class="card">
+          <div class="icon-badge icon-blue">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1E5AA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 14 7 14 9.5 7 14 19 16.5 14 22 14"></polyline></svg>
+          </div>
+          <h3>Kilometraje diario</h3>
+          <p>Cada unidad actualiza su kilometraje para calcular el próximo mantenimiento.</p>
+        </div>
+        <div class="card">
+          <div class="icon-badge icon-orange">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#E8963D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 L22 20 L2 20 Z"></path><line x1="12" y1="9" x2="12" y2="14"></line><circle cx="12" cy="17" r="0.6" fill="#E8963D" stroke="none"></circle></svg>
+          </div>
+          <h3>Reporte de fallas con foto</h3>
+          <p>Evidencia fotográfica de cada incidencia, lista para el jefe de flota.</p>
+        </div>
+        <div class="card">
+          <div class="icon-badge icon-orange">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="#E8963D" stroke="none" aria-hidden="true"><polygon points="13 2 3 14 11 14 10 22 21 10 13 10"></polygon></svg>
+          </div>
+          <h3>Alertas automáticas</h3>
+          <p>Aviso antes de que venza el cambio de aceite, frenos u otro servicio.</p>
+        </div>
+        <div class="card">
+          <div class="icon-badge icon-green">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#3AA76D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="20" x2="4" y2="12"></line><line x1="10" y1="20" x2="10" y2="4"></line><line x1="16" y1="20" x2="16" y2="15"></line><line x1="3" y1="20" x2="21" y2="20"></line></svg>
+          </div>
+          <h3>Dashboard de salud</h3>
+          <p>Semáforo por severidad para decidir qué unidad atender primero.</p>
+        </div>
+        <div class="card">
+          <div class="icon-badge icon-green">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#3AA76D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5 V19 C4 20.66 7.58 22 12 22 C16.42 22 20 20.66 20 19 V5"></path><path d="M4 12 C4 13.66 7.58 15 12 15 C16.42 15 20 13.66 20 12"></path></svg>
+          </div>
+          <h3>Rendimiento de combustible</h3>
+          <p>Consumo por unidad para detectar variaciones fuera de lo esperado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section class="section section-alt" id="como-funciona">
+    <div class="container how-inner">
+      <div class="how-copy">
+        <h2>¿Cómo funciona Rodante?</h2>
+
+        <ol class="steps">
+          <li>
+            <span class="step-number">1</span>
+            <div>
+              <h3>Registra tu flota</h3>
+              <p>Da de alta cada unidad con placa, modelo y kilometraje inicial.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">2</span>
+            <div>
+              <h3>Completa el checklist de salida</h3>
+              <p>El conductor revisa el vehículo desde su celular en segundos.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">3</span>
+            <div>
+              <h3>Recibe alertas automáticas</h3>
+              <p>La plataforma avisa antes de que venza un mantenimiento programado.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">4</span>
+            <div>
+              <h3>Decide con el dashboard</h3>
+              <p>El jefe de flota prioriza la unidad más urgente según su severidad.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="how-visual">
+        <div class="action-card">
+          <div class="action-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#3AA76D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="8 12.5 11 15.5 16 9"></polyline></svg>
+          </div>
+          <h3>Rodante en acción</h3>
+          <p>Meta de adopción para el primer mes de piloto</p>
+          <div class="action-metric">
+            <strong>70%</strong>
+            <p>de conductores completa el checklist</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANES -->
+  <section class="section" id="planes">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">— Planes</p>
+        <h2>Un plan simple, por vehículo</h2>
+        <p class="section-sub">Suscripción mensual por vehículo. El monto se cotiza según el tamaño de tu flota — sin letra chica ni permanencia forzosa.</p>
+      </div>
+
+      <div class="plans">
+        <article class="plan">
+          <h3>Suscripción mensual</h3>
+          <p class="plan-desc">Un solo plan, por vehículo activo en tu flota. Sin costos ocultos.</p>
+          <div class="plan-price">
+            <p class="plan-price-label">Precio por vehículo</p>
+            <p>Cotización personalizada según tu flota</p>
+          </div>
+          <ul class="plan-list">
+            <li>Checklist de salida y kilometraje</li>
+            <li>Alertas automáticas de mantenimiento</li>
+            <li>Dashboard de salud por vehículo</li>
+          </ul>
+          <a href="#contacto" class="btn btn-outline">Solicitar cotización</a>
+        </article>
+
+        <article class="plan plan-founder">
+          <span class="badge badge-orange">Flotas fundadoras</span>
+          <h3>Para las primeras empresas</h3>
+          <p class="plan-desc">Meses gratuitos o precio reducido por vehículo para las primeras flotas que se sumen al piloto.</p>
+          <div class="plan-price">
+            <p class="plan-price-label">Beneficio fundador</p>
+            <p>Meses gratis o tarifa reducida</p>
+          </div>
+          <ul class="plan-list">
+            <li>Todo lo del plan mensual</li>
+            <li>Acompañamiento cercano del equipo</li>
+          </ul>
+          <a href="#contacto" class="btn btn-accent">Unirme como fundador</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="section section-alt" id="testimonios">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">— Voces que guían el diseño</p>
+        <h2>Lo que buscan resolver nuestros usuarios</h2>
+      </div>
+
+      <div class="grid grid-3">
+        <figure class="testimonial-card">
+          <span class="quote-mark quote-blue" aria-hidden="true">“</span>
+          <blockquote>Ahora programo el mantenimiento antes de que se convierta en una avería en ruta.</blockquote>
+          <figcaption class="testimonial-author">
+            <span class="avatar avatar-blue small"></span>
+            <span>
+              <span class="author-name">Nombre Apellido</span>
+              <span class="author-role">Jefe de flota</span>
+            </span>
+          </figcaption>
+        </figure>
+        <figure class="testimonial-card">
+          <span class="quote-mark quote-green" aria-hidden="true">“</span>
+          <blockquote>Reportar una falla con foto me toma segundos y deja constancia de que avisé a tiempo.</blockquote>
+          <figcaption class="testimonial-author">
+            <span class="avatar avatar-green small"></span>
+            <span>
+              <span class="author-name">Nombre Apellido</span>
+              <span class="author-role">Conductor de flota</span>
+            </span>
+          </figcaption>
+        </figure>
+        <figure class="testimonial-card">
+          <span class="quote-mark quote-orange" aria-hidden="true">“</span>
+          <blockquote>El semáforo de severidad me dice de un vistazo qué unidad atender primero.</blockquote>
+          <figcaption class="testimonial-author">
+            <span class="avatar avatar-orange small"></span>
+            <span>
+              <span class="author-name">Nombre Apellido</span>
+              <span class="author-role">Empresa de transporte</span>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">— FAQ</p>
+        <h2>Resolvemos tus dudas</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-question" aria-expanded="true">
+            <span>¿Rodante es gratuito?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Ofrecemos una demo sin costo. Los planes pagos se cobran por suscripción mensual según el número de vehículos de tu flota.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Cómo empiezo a usar Rodante?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Solicita una demo y nuestro equipo te ayudará a registrar tu flota: cada unidad con su placa, modelo y kilometraje inicial. Luego tus conductores ya pueden completar el checklist de salida desde su celular.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Funciona con conectividad limitada en ruta?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>El checklist y el reporte de fallas están pensados para completarse en pocos segundos, de modo que el conductor pueda registrarlos incluso con señal limitada antes de salir a ruta.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Cómo prioriza Rodante las alertas?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Cada unidad se clasifica con un semáforo de severidad — bueno, alerta o crítico — según su kilometraje, los servicios próximos a vencer y las fallas reportadas, para que atiendas primero la más urgente.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Mis datos están seguros?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>La información de tu flota solo es accesible para los usuarios autorizados de tu cuenta, y la usamos únicamente para calcular el mantenimiento de tus unidades.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLICITA UNA DEMO -->
+  <section class="section section-alt" id="contacto">
+    <div class="container contact-inner">
+      <div class="contact-form-wrap">
+        <p class="eyebrow">— Solicita una demo</p>
+        <h2>Escríbenos</h2>
+
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="firstname">Nombre</label>
+              <input type="text" id="firstname" name="firstname" autocomplete="given-name" required>
+              <span class="field-error"></span>
+            </div>
+            <div class="form-field">
+              <label for="lastname">Apellido</label>
+              <input type="text" id="lastname" name="lastname" autocomplete="family-name" required>
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <span class="field-error"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="company">Empresa de transporte</label>
+            <input type="text" id="company" name="company" autocomplete="organization" required>
+            <span class="field-error"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <span class="field-error"></span>
+          </div>
+
+          <label class="checkbox-field">
+            <input type="checkbox" id="terms" name="terms" required>
+            Acepto los términos y condiciones
+          </label>
+
+          <button type="submit" class="btn btn-primary">Solicitar demo</button>
+
+          <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <div class="info-item">
+          <div class="icon-badge icon-blue">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#1E5AA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </div>
+          <div>
+            <h3>Correo</h3>
+            <p>contacto@rodante.pe</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-badge icon-green">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#3AA76D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4 H20 V16 H9 L4 20 Z"></path></svg>
+          </div>
+          <div>
+            <h3>WhatsApp</h3>
+            <p>+51 999 888 777</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-badge icon-orange">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#E8963D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14.5"></polyline></svg>
+          </div>
+          <div>
+            <h3>Horario</h3>
+            <p>Lun–Vie: 9am–6pm</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-badge icon-blue">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#1E5AA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><line x1="3" y1="12" x2="21" y2="12"></line><path d="M12 3 C16 7 16 17 12 21 C8 17 8 7 12 3 Z"></path></svg>
+          </div>
+          <div>
+            <h3>Ubicación</h3>
+            <p>Lima, Perú</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-cta">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Empieza a anticipar el mantenimiento de tu flota</h2>
+        <p>Agenda una demo con nuestro equipo. Sin tarjeta de crédito.</p>
+        <div class="cta-actions">
+          <a href="app/index.html#/login" class="btn btn-outline btn-inverse">Iniciar sesión</a>
+          <a href="#contacto" class="btn btn-accent">Solicitar demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo logo-light" aria-label="Rodante - inicio">
+          <span class="logo-mark logo-mark-sm">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 12 9 18 20 5"></polyline></svg>
+          </span>
+          <span>Rodante</span>
+        </a>
+        <p>Mantenimiento preventivo y telemetría para flotas de carga ligera.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Producto</h3>
+        <a href="#producto">Funcionalidades</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#planes">Planes</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Empresa</h3>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="#">Términos</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Reclamaciones</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Rodante. Todos los derechos reservados.</p>
+      <p>Desarrollado por Team Track · UPC</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
