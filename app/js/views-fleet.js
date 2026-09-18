@@ -1,7 +1,7 @@
-/* Rodante app — jefe de flota: dashboard, vehículos, checklists, kilometraje, combustible */
+/* FleetCare app — jefe de flota: dashboard, vehículos, checklists, kilometraje, combustible */
 (function () {
   'use strict';
-  const R = window.Rodante;
+  const R = window.FleetCare;
   const { html, ico } = R;
 
   /* ---------- Helpers compartidos ---------- */

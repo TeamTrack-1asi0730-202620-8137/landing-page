@@ -1,7 +1,7 @@
-/* Rodante app — exportación: reporte PDF (impresión) y Excel (.xlsx sin dependencias) */
+/* FleetCare app — exportación: reporte PDF (impresión) y Excel (.xlsx sin dependencias) */
 (function () {
   'use strict';
-  const R = window.Rodante;
+  const R = window.FleetCare;
 
   /* ---------- XLSX mínimo (ZIP sin compresión) ---------- */
   const CRC = (() => {
@@ -62,7 +62,7 @@
       });
     });
     if (!total) return false;
-    R.download(R.buildXlsx('Combustible', rows, [12, 11, 22, 9, 10, 12, 13, 20, 20]), `rodante-combustible-${R.today()}.xlsx`);
+    R.download(R.buildXlsx('Combustible', rows, [12, 11, 22, 9, 10, 12, 13, 20, 20]), `fleetcare-combustible-${R.today()}.xlsx`);
     return total;
   };
 
@@ -87,7 +87,7 @@
       <h2>Estado actual de la flota</h2>${table(['Placa', 'Vehículo', 'Kilometraje', 'Estado', 'Detalle'], state)}
       <h2>Mantenimientos atendidos</h2>${table(['Fecha', 'Placa', 'Servicio', 'Kilometraje'], done.map((m) => [R.fmtDate(m.date), plate(m.vehicleId), m.service, R.fmtNum(m.km) + ' km']))}
       <h2>Fallas reportadas</h2>${table(['Fecha', 'Placa', 'Falla', 'Prioridad', 'Estado'], faults.map((f) => [R.fmtDate(f.date), plate(f.vehicleId), f.title, f.priority, R.faultStates[f.status]]))}
-      <footer>Generado con Rodante · Mantenimiento preventivo para flotas de carga ligera</footer></body></html>`;
+      <footer>Generado con FleetCare · Mantenimiento preventivo para flotas de carga ligera</footer></body></html>`;
     const ifr = document.createElement('iframe');
     ifr.setAttribute('aria-hidden', 'true');
     ifr.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;border:0';

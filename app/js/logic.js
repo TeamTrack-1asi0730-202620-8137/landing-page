@@ -1,14 +1,14 @@
-/* Rodante app — modelo de datos, reglas de negocio y datos demo */
+/* FleetCare app — modelo de datos, reglas de negocio y datos demo */
 (function () {
   'use strict';
-  const R = window.Rodante;
+  const R = window.FleetCare;
 
   R.PRICE_PER_VEHICLE = 25; // tarifa referencial de la demo (S/ por vehículo al mes)
   R.LITERS_PER_GALLON = 3.785;
   R.WARN_PCT = 0.9;
   R.NEAR_PCT = 0.75;
   R.TIME_ALERT_DAYS = 90;
-  R.DEMO_PASSWORD = 'rodante123';
+  R.DEMO_PASSWORD = 'fleetcare123';
 
   const defaultItems = () => ['Nivel de aceite', 'Frenos', 'Llantas', 'Luces', 'Fugas visibles'].map((name) => ({ id: R.uid('i'), name, required: true }));
   const defaultServices = () => [
@@ -197,8 +197,8 @@
     const pass = await R.hash(R.DEMO_PASSWORD);
 
     const users = [
-      { id: 'u_mgr', name: 'Carlos Mendoza', email: 'jefe@rodante.pe', passHash: pass, role: 'manager', companyId: cid, active: true },
-      { id: 'u_d1', name: 'Luis Quispe', email: 'conductor@rodante.pe', passHash: pass, role: 'driver', companyId: cid, active: true },
+      { id: 'u_mgr', name: 'Carlos Mendoza', email: 'jefe@fleetcare.pe', passHash: pass, role: 'manager', companyId: cid, active: true },
+      { id: 'u_d1', name: 'Luis Quispe', email: 'conductor@fleetcare.pe', passHash: pass, role: 'driver', companyId: cid, active: true },
       { id: 'u_d2', name: 'Marco Rojas', email: 'marco.rojas@transportesandes.pe', passHash: pass, role: 'driver', companyId: cid, active: true },
     ];
 

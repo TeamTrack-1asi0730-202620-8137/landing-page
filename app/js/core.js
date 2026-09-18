@@ -1,8 +1,8 @@
-/* Rodante app — núcleo: plantillas, utilidades, almacenamiento, UI compartida */
+/* FleetCare app — núcleo: plantillas, utilidades, almacenamiento, UI compartida */
 (function (global) {
   'use strict';
 
-  const R = (global.Rodante = { ui: {}, actions: {}, forms: {}, inputs: {}, changes: {} });
+  const R = (global.FleetCare = { ui: {}, actions: {}, forms: {}, inputs: {}, changes: {} });
 
   /* ---------- Plantillas HTML con escape automático ---------- */
   class Raw { constructor(s) { this.s = s; } toString() { return this.s; } }
@@ -76,7 +76,7 @@
 
   // Hash de contraseña. SHA-256 cuando está disponible; es un prototipo sin backend.
   R.hash = async (text) => {
-    const salted = 'rodante:' + text;
+    const salted = 'fleetcare:' + text;
     if (global.crypto && global.crypto.subtle && global.TextEncoder) {
       const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(salted));
       return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
@@ -91,8 +91,8 @@
   };
 
   /* ---------- Almacenamiento ---------- */
-  const KEY = 'rodante.app.v1';
-  const SKEY = 'rodante.session.v1';
+  const KEY = 'fleetcare.app.v1';
+  const SKEY = 'fleetcare.session.v1';
   let state = null;
 
   R.state = () => state;

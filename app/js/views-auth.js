@@ -1,14 +1,14 @@
-/* Rodante app — autenticación: HU-38 registro, HU-39 login, HU-40 recuperar contraseña */
+/* FleetCare app — autenticación: HU-38 registro, HU-39 login, HU-40 recuperar contraseña */
 (function () {
   'use strict';
-  const R = window.Rodante;
+  const R = window.FleetCare;
   const { html, ico } = R;
 
-  const brand = html`<a class="auth-brand" href="#/login"><span class="logo-mark">${ico('logo', 20)}</span><span>Rodante</span></a>`;
+  const brand = html`<a class="auth-brand" href="#/login"><img class="logo-img" src="../img/fleetcare-logo-128.png" alt="" width="40" height="40"><span>FleetCare</span></a>`;
   const pw = (label, name, auto, extra = '') => html`<div class="field"><label for="pw-${name}">${label}</label>
     <div class="pw"><input id="pw-${name}" name="${name}" type="password" autocomplete="${auto}" ${R.raw(extra)}><button type="button" class="pw-toggle" data-action="toggle-pass" aria-label="Mostrar contraseña">${ico('eye', 18)}</button></div>
     <span class="field-error" data-err="${name}" role="alert"></span></div>`;
-  const shellAuth = (inner, aside) => html`<div class="auth-card">${brand}${inner}</div>${aside || ''}<a class="auth-back" href="../index.html">← Volver al sitio de Rodante</a>`;
+  const shellAuth = (inner, aside) => html`<div class="auth-card">${brand}${inner}</div>${aside || ''}<a class="auth-back" href="../index.html">← Volver al sitio de FleetCare</a>`;
 
   R.actions['toggle-pass'] = (el) => {
     const i = el.parentElement.querySelector('input');
@@ -35,7 +35,7 @@
 
   R.actions['demo-login'] = (el) => {
     const f = R.$('form[data-form="login"]');
-    f.elements.email.value = el.getAttribute('data-role') === 'manager' ? 'jefe@rodante.pe' : 'conductor@rodante.pe';
+    f.elements.email.value = el.getAttribute('data-role') === 'manager' ? 'jefe@fleetcare.pe' : 'conductor@fleetcare.pe';
     f.elements.password.value = R.DEMO_PASSWORD;
     f.requestSubmit();
   };

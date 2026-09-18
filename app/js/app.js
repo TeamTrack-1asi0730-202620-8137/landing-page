@@ -1,7 +1,7 @@
-/* Rodante app — enrutador, layouts, eventos globales, notificaciones y arranque */
+/* FleetCare app — enrutador, layouts, eventos globales, notificaciones y arranque */
 (function () {
   'use strict';
-  const R = window.Rodante;
+  const R = window.FleetCare;
   const { html, ico } = R;
 
   /* ---------- Rutas ---------- */
@@ -25,7 +25,7 @@
     ['/c/inicio', 'Inicio', 'home'], ['/c/checklist', 'Checklist', 'clipboard'], ['/c/kilometraje', 'Kilometraje', 'gauge'],
     ['/c/fallas', 'Fallas', 'alert'], ['/c/combustible', 'Combustible', 'fuel'],
   ];
-  const logo = (cls = '') => html`<span class="logo-mark ${cls}">${ico('logo', 18)}</span>`;
+  const logo = (cls = '') => html`<img class="logo-img ${cls}" src="../img/fleetcare-logo-128.png" alt="" width="36" height="36">`;
 
   /* ---------- Layouts ---------- */
   function shell(layout, me) {
@@ -33,7 +33,7 @@
     if (layout === 'manager') {
       return html`<div class="shell" id="shell">
         <aside class="sidebar" aria-label="Navegación principal">
-          <a class="brand" href="#/dashboard" aria-label="Rodante — Dashboard">${logo()}<span>Rodante</span></a>
+          <a class="brand" href="#/dashboard" aria-label="FleetCare — Dashboard">${logo()}<span>FleetCare</span></a>
           <nav class="side-nav" id="side-nav">${MANAGER_NAV.map(([p, l, i]) => html`<a href="#${p}" data-nav="${p}"><span class="nav-ico">${ico(i, 18)}</span><span class="nav-label">${l}</span><span class="nav-badge" data-badge="${p}" hidden></span></a>`)}</nav>
           <div class="side-user">
             <span class="avatar">${R.initials(me.name)}</span>
@@ -147,12 +147,12 @@
     if (layout === 'manager') {
       R.$('#tb-eyebrow').textContent = view.eyebrow || '';
       R.$('#tb-title').textContent = view.title || '';
-      document.title = `${view.title} — Rodante`;
+      document.title = `${view.title} — FleetCare`;
     } else if (layout === 'driver') {
       R.$('#ph-title').textContent = view.title || '';
-      document.title = `${view.title} — Rodante`;
+      document.title = `${view.title} — FleetCare`;
     } else {
-      document.title = `${view.title || 'Acceso'} — Rodante`;
+      document.title = `${view.title || 'Acceso'} — FleetCare`;
     }
     R.$$('[data-nav]').forEach((a) => {
       const p = a.getAttribute('data-nav');
@@ -243,7 +243,7 @@
 
   // Sincronización entre pestañas (p. ej. el conductor reporta y el jefe lo ve al instante)
   window.addEventListener('storage', (e) => {
-    if (e.key !== 'rodante.app.v1' && e.key !== 'rodante.session.v1') return;
+    if (e.key !== 'fleetcare.app.v1' && e.key !== 'fleetcare.session.v1') return;
     R.load();
     if (!R.me()) { current = null; R.dispatch(); return; }
     R.refreshChrome();

@@ -1,7 +1,7 @@
-/* Rodante app — jefe de flota: fallas, incidencias, mantenimiento, conductores, suscripción, reportes, configuración */
+/* FleetCare app — jefe de flota: fallas, incidencias, mantenimiento, conductores, suscripción, reportes, configuración */
 (function () {
   'use strict';
-  const R = window.Rodante;
+  const R = window.FleetCare;
   const { html, ico } = R;
 
   const PRIO_ORDER = ['alta', 'media', 'baja'];
@@ -103,7 +103,7 @@
     if (tab === 'intervalos') {
       return {
         eyebrow: 'Mantenimiento', title: 'Intervalos de mantenimiento',
-        html: html`${tabs}<p class="lead-sm">Define cada cuántos kilómetros se debe realizar cada servicio. Rodante avisará al llegar al ${Math.round(R.WARN_PCT * 100)}% del intervalo.</p>
+        html: html`${tabs}<p class="lead-sm">Define cada cuántos kilómetros se debe realizar cada servicio. FleetCare avisará al llegar al ${Math.round(R.WARN_PCT * 100)}% del intervalo.</p>
           <form class="card form-card" data-form="intervals" novalidate><div class="form-grid">${db.services.map((s) => R.field({ label: `${s.name} — intervalo (km)`, name: 'km_' + s.id, type: 'number', value: s.km, attrs: { min: 500, step: 100, inputmode: 'numeric' } }))}</div>
             <div class="form-actions"><button class="btn btn-primary" type="submit">Guardar cambios</button></div></form>`,
       };
@@ -247,7 +247,7 @@
     const sub = db.subscription;
     if (!sub) {
       return {
-        eyebrow: 'Suscripción', title: 'Suscribirme a Rodante',
+        eyebrow: 'Suscripción', title: 'Suscribirme a FleetCare',
         html: html`<div class="grid grid-2 detail-grid">
           ${R.card('Resumen del plan', html`<dl class="dl"><div><dt>Plan</dt><dd>Suscripción mensual por vehículo</dd></div><div><dt>Vehículos en tu flota</dt><dd>${n}</dd></div><div><dt>Precio por vehículo</dt><dd>${R.money(R.PRICE_PER_VEHICLE)} / mes <small class="muted">· tarifa referencial de la demostración; la cotización real es personalizada</small></dd></div></dl>
             <div class="total-box"><span>Total mensual estimado</span><strong>${R.money(n * R.PRICE_PER_VEHICLE)}</strong></div>

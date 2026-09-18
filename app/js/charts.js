@@ -1,7 +1,7 @@
-/* Rodante app — gráficos SVG sin dependencias */
+/* FleetCare app — gráficos SVG sin dependencias */
 (function () {
   'use strict';
-  const R = window.Rodante;
+  const R = window.FleetCare;
 
   // points: [{ label, value, tip }]
   R.lineChart = (points, opts = {}) => {

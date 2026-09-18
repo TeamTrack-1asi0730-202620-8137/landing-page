@@ -691,3 +691,6 @@ h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; }
   .faq-question { padding: 18px 20px; font-size: 17px; }
   .faq-answer { padding: 0 20px; }
 }
+
+.logo-img { width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0; display: block; }
+.logo-img-sm { width: 34px; height: 34px; border-radius: 8px; }

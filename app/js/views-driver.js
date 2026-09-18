@@ -1,7 +1,7 @@
-/* Rodante app — conductor (móvil): inicio, checklist, kilometraje, fallas, combustible */
+/* FleetCare app — conductor (móvil): inicio, checklist, kilometraje, fallas, combustible */
 (function () {
   'use strict';
-  const R = window.Rodante;
+  const R = window.FleetCare;
   const { html, ico } = R;
   const MAX_PHOTOS = 5;
 
