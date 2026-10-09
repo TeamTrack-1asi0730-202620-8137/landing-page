@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FleetCare — Mantenimiento preventivo para flotas de carga</title>
-<meta name="description" content="FleetCare conecta el checklist diario del conductor con las alertas de mantenimiento del jefe de flota, para que ninguna falla te tome por sorpresa en ruta.">
+<title data-i18n="meta.title">FleetCare — Mantenimiento preventivo para flotas de carga</title>
+<meta name="description" data-i18n-content="meta.description" content="FleetCare conecta el checklist diario del conductor con las alertas de mantenimiento del jefe de flota, para que ninguna falla te tome por sorpresa en ruta.">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,25 +15,31 @@
 
 <header class="site-header" id="header">
   <div class="container header-inner">
-    <a href="#top" class="logo" aria-label="FleetCare - inicio">
+    <a href="#top" class="logo" aria-label="FleetCare - inicio" data-i18n-aria="header.homeAria">
       <img class="logo-img" src="img/fleetcare-logo-128.png" alt="" width="40" height="40">
       <span>FleetCare</span>
     </a>
 
-    <nav class="main-nav" id="main-nav" aria-label="Principal">
-      <a href="#producto">Producto</a>
-      <a href="#como-funciona">Cómo funciona</a>
-      <a href="#planes">Planes</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#contacto">Contacto</a>
+    <nav class="main-nav" id="main-nav" aria-label="Principal" data-i18n-aria="header.navAria">
+      <a href="#producto" data-i18n="nav.product">Producto</a>
+      <a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a>
+      <a href="#planes" data-i18n="nav.plans">Planes</a>
+      <a href="#nosotros" data-i18n="nav.about">Nosotros</a>
+      <a href="#equipo" data-i18n="nav.team">Equipo</a>
+      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
     </nav>
 
     <div class="header-actions">
-      <a href="app/index.html#/login" class="btn btn-outline btn-sm">Iniciar sesión</a>
-      <a href="#contacto" class="btn btn-primary btn-sm">Solicitar demo</a>
+      <a href="app/index.html#/login" class="btn btn-outline btn-sm" data-i18n="cta.login">Iniciar sesión</a>
+      <a href="#contacto" class="btn btn-primary btn-sm" data-i18n="cta.demo">Solicitar demo</a>
     </div>
 
-    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+    <div class="lang-switch" role="group" aria-label="Idioma" data-i18n-aria="header.langAria">
+      <button type="button" class="lang-option" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" class="lang-option" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" data-i18n-aria="header.menuAria" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -45,41 +51,41 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <span class="badge badge-green">Nuevo · SaaS de mantenimiento preventivo</span>
-        <h1>Anticípate a las averías de tu flota antes de que ocurran en ruta</h1>
-        <p class="lead">FleetCare conecta el checklist diario del conductor con las alertas de mantenimiento del jefe de flota, para que ninguna falla te tome por sorpresa.</p>
+        <span class="badge badge-green" data-i18n="hero.badge">Nuevo · SaaS de mantenimiento preventivo</span>
+        <h1 data-i18n="hero.title">Anticípate a las averías de tu flota antes de que ocurran en ruta</h1>
+        <p class="lead" data-i18n="hero.lead">FleetCare conecta el checklist diario del conductor con las alertas de mantenimiento del jefe de flota, para que ninguna falla te tome por sorpresa.</p>
         <div class="hero-cta">
-          <a href="#contacto" class="btn btn-primary">Solicitar demo</a>
-          <a href="#como-funciona" class="btn btn-outline">Ver cómo funciona</a>
+          <a href="#contacto" class="btn btn-primary" data-i18n="cta.demo">Solicitar demo</a>
+          <a href="#como-funciona" class="btn btn-outline" data-i18n="hero.seeHow">Ver cómo funciona</a>
         </div>
         <div class="hero-stats">
           <div class="stat">
             <h3>18%</h3>
-            <p>Disponibilidad ↑</p>
+            <p data-i18n="hero.statAvailability">Disponibilidad ↑</p>
           </div>
           <div class="stat">
             <h3>15%</h3>
-            <p>Costos ↓</p>
+            <p data-i18n="hero.statCosts">Costos ↓</p>
           </div>
           <div class="stat">
             <h3>12%</h3>
-            <p>Fallas ↓</p>
+            <p data-i18n="hero.statFailures">Fallas ↓</p>
           </div>
         </div>
       </div>
 
       <div class="hero-visual">
         <div class="chart-card">
-          <svg viewBox="0 0 200 100" aria-label="Vista previa del dashboard de FleetCare" role="img">
+          <svg viewBox="0 0 200 100" aria-label="Vista previa del dashboard de FleetCare" data-i18n-aria="hero.chartAria" role="img">
             <polyline points="0,80 25,80 40,55 55,65 70,20 90,45 110,30 130,50 150,25 200,25" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.9"></polyline>
           </svg>
         </div>
         <div class="status-card">
-          <p class="status-title">Estado de la flota</p>
+          <p class="status-title" data-i18n="hero.fleetStatus">Estado de la flota</p>
           <div class="status-legend">
-            <span><i class="dot dot-green"></i>Bueno</span>
-            <span><i class="dot dot-orange"></i>Alerta</span>
-            <span><i class="dot dot-red"></i>Crítico</span>
+            <span><i class="dot dot-green"></i><span data-i18n="hero.good">Bueno</span></span>
+            <span><i class="dot dot-orange"></i><span data-i18n="hero.warning">Alerta</span></span>
+            <span><i class="dot dot-red"></i><span data-i18n="hero.critical">Crítico</span></span>
           </div>
         </div>
       </div>
@@ -90,35 +96,67 @@
   <section class="section section-alt" id="nosotros">
     <div class="container">
       <div class="about-head">
-        <p class="eyebrow">— Conócenos</p>
-        <h2>Somos FleetCare</h2>
-        <p class="about-lead">Team Track nace para anticiparse a la falla: FleetCare da a las pequeñas empresas de transporte de carga ligera un registro centralizado y confiable del desgaste de cada unidad de su flota.</p>
+        <p class="eyebrow" data-i18n="about.eyebrow">— Conócenos</p>
+        <h2 data-i18n="about.title">Somos FleetCare</h2>
+        <p class="about-lead" data-i18n="about.lead">Team Track nace para anticiparse a la falla: FleetCare da a las pequeñas empresas de transporte de carga ligera un registro centralizado y confiable del desgaste de cada unidad de su flota.</p>
       </div>
 
       <div class="grid grid-3">
         <div class="fact-card">
           <p class="fact-num fact-red">40%</p>
-          <p class="fact-text">de la flota de carga activa del Perú opera en tramo de penalización</p>
+          <p class="fact-text" data-i18n="about.fact1">de la flota de carga activa del Perú opera en tramo de penalización</p>
           <p class="fact-source">Mordor Intelligence, 2026</p>
         </div>
         <div class="fact-card">
           <p class="fact-num fact-orange">488</p>
-          <p class="fact-text">accidentes de tránsito en 2023 causados por fallas mecánicas</p>
+          <p class="fact-text" data-i18n="about.fact2">accidentes de tránsito en 2023 causados por fallas mecánicas</p>
           <p class="fact-source">Falla Carrillo, 2024</p>
         </div>
         <div class="fact-card">
           <p class="fact-num fact-blue">66.66%</p>
-          <p class="fact-text">de pymes de logística aún con transformación digital básica</p>
+          <p class="fact-text" data-i18n="about.fact3">de pymes de logística aún con transformación digital básica</p>
           <p class="fact-source">Rojas García et al., 2023</p>
         </div>
       </div>
 
-      <div class="founders" id="equipo">
-        <p class="founders-label">Equipo fundador</p>
-        <ul class="founders-list">
-          <li><span class="avatar avatar-blue">FD</span>Fernanda Díaz Vargas</li>
-          <li><span class="avatar avatar-green">MR</span>Matthias Romero Véliz</li>
-          <li><span class="avatar avatar-orange">SE</span>Santiago Echevarría Lizana</li>
+      <div class="team" id="equipo">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="team.eyebrow">— Nuestro equipo</p>
+          <h2 data-i18n="team.title">Las personas detrás de FleetCare</h2>
+          <p class="section-sub" data-i18n="team.sub">Somos estudiantes de Ingeniería de Software de la UPC y formamos Team Track.</p>
+        </div>
+
+        <ul class="team-grid">
+          <li class="team-card">
+            <img class="team-photo" src="img/team/fernanda-diaz.jpg" alt="Foto de Fernanda Ysabella Díaz Vargas" data-i18n-alt="team.photoAlt" data-name="Fernanda Ysabella Díaz Vargas" width="160" height="160" loading="lazy">
+            <h3>Fernanda Ysabella Díaz Vargas</h3>
+            <p class="team-role" data-i18n="team.role">Ingeniería de Software · UPC</p>
+            <p class="team-bio" data-i18n="team.bioFernanda">Le apasiona aprender todo sobre su área y ve en cada desafío una oportunidad para mejorar.</p>
+          </li>
+          <li class="team-card">
+            <img class="team-photo" src="img/team/santiago-echevarria.jpg" alt="Foto de Santiago Israel Echevarría Lizana" data-i18n-alt="team.photoAlt" data-name="Santiago Israel Echevarría Lizana" width="160" height="160" loading="lazy">
+            <h3>Santiago Israel Echevarría Lizana</h3>
+            <p class="team-role" data-i18n="team.role">Ingeniería de Software · UPC</p>
+            <p class="team-bio" data-i18n="team.bioSantiago">Le interesa el desarrollo de software y el diseño de soluciones; trabaja con HTML, CSS, SQL Server y MongoDB.</p>
+          </li>
+          <li class="team-card">
+            <img class="team-photo" src="img/team/fernando-espiritu.jpg" alt="Foto de Fernando Carlos Espiritu Silvestre" data-i18n-alt="team.photoAlt" data-name="Fernando Carlos Espiritu Silvestre" width="160" height="160" loading="lazy">
+            <h3>Fernando Carlos Espiritu Silvestre</h3>
+            <p class="team-role" data-i18n="team.role">Ingeniería de Software · UPC</p>
+            <p class="team-bio" data-i18n="team.bioFernando">Le apasiona diseñar y programar con JavaScript, C++, SQL Server, MongoDB y frameworks como Vue y Angular.</p>
+          </li>
+          <li class="team-card">
+            <img class="team-photo" src="img/team/matthias-romero.jpg" alt="Foto de Matthias Alonso Romero Véliz" data-i18n-alt="team.photoAlt" data-name="Matthias Alonso Romero Véliz" width="160" height="160" loading="lazy">
+            <h3>Matthias Alonso Romero Véliz</h3>
+            <p class="team-role" data-i18n="team.role">Ingeniería de Software · UPC</p>
+            <p class="team-bio" data-i18n="team.bioMatthias">Se mueve entre la investigación de usuarios, el diseño de producto y la implementación técnica.</p>
+          </li>
+          <li class="team-card">
+            <img class="team-photo" src="img/team/juan-orosco.jpg" alt="Foto de Juan Carlos Orosco Ttamiña" data-i18n-alt="team.photoAlt" data-name="Juan Carlos Orosco Ttamiña" width="160" height="160" loading="lazy">
+            <h3>Juan Carlos Orosco Ttamiña</h3>
+            <p class="team-role" data-i18n="team.role">Ingeniería de Software · UPC</p>
+            <p class="team-bio" data-i18n="team.bioJuan">Le motiva crear aplicaciones y afrontar nuevos desafíos técnicos que le permitan seguir aprendiendo.</p>
+          </li>
         </ul>
       </div>
     </div>
@@ -128,8 +166,8 @@
   <section class="section" id="producto">
     <div class="container">
       <div class="section-heading">
-        <p class="eyebrow">— Lo que ofrecemos</p>
-        <h2>Todo lo que necesita tu flota</h2>
+        <p class="eyebrow" data-i18n="features.eyebrow">— Lo que ofrecemos</p>
+        <h2 data-i18n="features.title">Todo lo que necesita tu flota</h2>
       </div>
 
       <div class="grid grid-3">
@@ -137,43 +175,43 @@
           <div class="icon-badge icon-blue">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1E5AA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="8 12.5 11 15.5 16 9"></polyline></svg>
           </div>
-          <h3>Checklist de salida</h3>
-          <p>El conductor revisa el vehículo en segundos antes de cada ruta, sin papeleo.</p>
+          <h3 data-i18n="features.checklistTitle">Checklist de salida</h3>
+          <p data-i18n="features.checklistText">El conductor revisa el vehículo en segundos antes de cada ruta, sin papeleo.</p>
         </div>
         <div class="card">
           <div class="icon-badge icon-blue">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1E5AA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 14 7 14 9.5 7 14 19 16.5 14 22 14"></polyline></svg>
           </div>
-          <h3>Kilometraje diario</h3>
-          <p>Cada unidad actualiza su kilometraje para calcular el próximo mantenimiento.</p>
+          <h3 data-i18n="features.mileageTitle">Kilometraje diario</h3>
+          <p data-i18n="features.mileageText">Cada unidad actualiza su kilometraje para calcular el próximo mantenimiento.</p>
         </div>
         <div class="card">
           <div class="icon-badge icon-orange">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#E8963D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 L22 20 L2 20 Z"></path><line x1="12" y1="9" x2="12" y2="14"></line><circle cx="12" cy="17" r="0.6" fill="#E8963D" stroke="none"></circle></svg>
           </div>
-          <h3>Reporte de fallas con foto</h3>
-          <p>Evidencia fotográfica de cada incidencia, lista para el jefe de flota.</p>
+          <h3 data-i18n="features.photoTitle">Reporte de fallas con foto</h3>
+          <p data-i18n="features.photoText">Evidencia fotográfica de cada incidencia, lista para el jefe de flota.</p>
         </div>
         <div class="card">
           <div class="icon-badge icon-orange">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="#E8963D" stroke="none" aria-hidden="true"><polygon points="13 2 3 14 11 14 10 22 21 10 13 10"></polygon></svg>
           </div>
-          <h3>Alertas automáticas</h3>
-          <p>Aviso antes de que venza el cambio de aceite, frenos u otro servicio.</p>
+          <h3 data-i18n="features.alertsTitle">Alertas automáticas</h3>
+          <p data-i18n="features.alertsText">Aviso antes de que venza el cambio de aceite, frenos u otro servicio.</p>
         </div>
         <div class="card">
           <div class="icon-badge icon-green">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#3AA76D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="20" x2="4" y2="12"></line><line x1="10" y1="20" x2="10" y2="4"></line><line x1="16" y1="20" x2="16" y2="15"></line><line x1="3" y1="20" x2="21" y2="20"></line></svg>
           </div>
-          <h3>Dashboard de salud</h3>
-          <p>Semáforo por severidad para decidir qué unidad atender primero.</p>
+          <h3 data-i18n="features.dashboardTitle">Dashboard de salud</h3>
+          <p data-i18n="features.dashboardText">Semáforo por severidad para decidir qué unidad atender primero.</p>
         </div>
         <div class="card">
           <div class="icon-badge icon-green">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#3AA76D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5 V19 C4 20.66 7.58 22 12 22 C16.42 22 20 20.66 20 19 V5"></path><path d="M4 12 C4 13.66 7.58 15 12 15 C16.42 15 20 13.66 20 12"></path></svg>
           </div>
-          <h3>Rendimiento de combustible</h3>
-          <p>Consumo por unidad para detectar variaciones fuera de lo esperado.</p>
+          <h3 data-i18n="features.fuelTitle">Rendimiento de combustible</h3>
+          <p data-i18n="features.fuelText">Consumo por unidad para detectar variaciones fuera de lo esperado.</p>
         </div>
       </div>
     </div>
@@ -183,35 +221,35 @@
   <section class="section section-alt" id="como-funciona">
     <div class="container how-inner">
       <div class="how-copy">
-        <h2>¿Cómo funciona FleetCare?</h2>
+        <h2 data-i18n="how.title">¿Cómo funciona FleetCare?</h2>
 
         <ol class="steps">
           <li>
             <span class="step-number">1</span>
             <div>
-              <h3>Registra tu flota</h3>
-              <p>Da de alta cada unidad con placa, modelo y kilometraje inicial.</p>
+              <h3 data-i18n="how.step1Title">Registra tu flota</h3>
+              <p data-i18n="how.step1Text">Da de alta cada unidad con placa, modelo y kilometraje inicial.</p>
             </div>
           </li>
           <li>
             <span class="step-number">2</span>
             <div>
-              <h3>Completa el checklist de salida</h3>
-              <p>El conductor revisa el vehículo desde su celular en segundos.</p>
+              <h3 data-i18n="how.step2Title">Completa el checklist de salida</h3>
+              <p data-i18n="how.step2Text">El conductor revisa el vehículo desde su celular en segundos.</p>
             </div>
           </li>
           <li>
             <span class="step-number">3</span>
             <div>
-              <h3>Recibe alertas automáticas</h3>
-              <p>La plataforma avisa antes de que venza un mantenimiento programado.</p>
+              <h3 data-i18n="how.step3Title">Recibe alertas automáticas</h3>
+              <p data-i18n="how.step3Text">La plataforma avisa antes de que venza un mantenimiento programado.</p>
             </div>
           </li>
           <li>
             <span class="step-number">4</span>
             <div>
-              <h3>Decide con el dashboard</h3>
-              <p>El jefe de flota prioriza la unidad más urgente según su severidad.</p>
+              <h3 data-i18n="how.step4Title">Decide con el dashboard</h3>
+              <p data-i18n="how.step4Text">El jefe de flota prioriza la unidad más urgente según su severidad.</p>
             </div>
           </li>
         </ol>
@@ -222,11 +260,11 @@
           <div class="action-icon">
             <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#3AA76D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="8 12.5 11 15.5 16 9"></polyline></svg>
           </div>
-          <h3>FleetCare en acción</h3>
-          <p>Meta de adopción para el primer mes de piloto</p>
+          <h3 data-i18n="how.actionTitle">FleetCare en acción</h3>
+          <p data-i18n="how.actionSub">Meta de adopción para el primer mes de piloto</p>
           <div class="action-metric">
             <strong>70%</strong>
-            <p>de conductores completa el checklist</p>
+            <p data-i18n="how.actionMetric">de conductores completa el checklist</p>
           </div>
         </div>
       </div>
@@ -237,40 +275,40 @@
   <section class="section" id="planes">
     <div class="container">
       <div class="section-heading">
-        <p class="eyebrow">— Planes</p>
-        <h2>Un plan simple, por vehículo</h2>
-        <p class="section-sub">Suscripción mensual por vehículo. El monto se cotiza según el tamaño de tu flota — sin letra chica ni permanencia forzosa.</p>
+        <p class="eyebrow" data-i18n="plans.eyebrow">— Planes</p>
+        <h2 data-i18n="plans.title">Un plan simple, por vehículo</h2>
+        <p class="section-sub" data-i18n="plans.sub">Suscripción mensual por vehículo. El monto se cotiza según el tamaño de tu flota — sin letra chica ni permanencia forzosa.</p>
       </div>
 
       <div class="plans">
         <article class="plan">
-          <h3>Suscripción mensual</h3>
-          <p class="plan-desc">Un solo plan, por vehículo activo en tu flota. Sin costos ocultos.</p>
+          <h3 data-i18n="plans.monthlyTitle">Suscripción mensual</h3>
+          <p class="plan-desc" data-i18n="plans.monthlyDesc">Un solo plan, por vehículo activo en tu flota. Sin costos ocultos.</p>
           <div class="plan-price">
-            <p class="plan-price-label">Precio por vehículo</p>
-            <p>Cotización personalizada según tu flota</p>
+            <p class="plan-price-label" data-i18n="plans.priceLabel">Precio por vehículo</p>
+            <p data-i18n="plans.priceValue">Cotización personalizada según tu flota</p>
           </div>
           <ul class="plan-list">
-            <li>Checklist de salida y kilometraje</li>
-            <li>Alertas automáticas de mantenimiento</li>
-            <li>Dashboard de salud por vehículo</li>
+            <li data-i18n="plans.monthlyItem1">Checklist de salida y kilometraje</li>
+            <li data-i18n="plans.monthlyItem2">Alertas automáticas de mantenimiento</li>
+            <li data-i18n="plans.monthlyItem3">Dashboard de salud por vehículo</li>
           </ul>
-          <a href="#contacto" class="btn btn-outline">Solicitar cotización</a>
+          <a href="#contacto" class="btn btn-outline" data-i18n="plans.quote">Solicitar cotización</a>
         </article>
 
         <article class="plan plan-founder">
-          <span class="badge badge-orange">Flotas fundadoras</span>
-          <h3>Para las primeras empresas</h3>
-          <p class="plan-desc">Meses gratuitos o precio reducido por vehículo para las primeras flotas que se sumen al piloto.</p>
+          <span class="badge badge-orange" data-i18n="plans.founderBadge">Flotas fundadoras</span>
+          <h3 data-i18n="plans.founderTitle">Para las primeras empresas</h3>
+          <p class="plan-desc" data-i18n="plans.founderDesc">Meses gratuitos o precio reducido por vehículo para las primeras flotas que se sumen al piloto.</p>
           <div class="plan-price">
-            <p class="plan-price-label">Beneficio fundador</p>
-            <p>Meses gratis o tarifa reducida</p>
+            <p class="plan-price-label" data-i18n="plans.founderLabel">Beneficio fundador</p>
+            <p data-i18n="plans.founderValue">Meses gratis o tarifa reducida</p>
           </div>
           <ul class="plan-list">
-            <li>Todo lo del plan mensual</li>
-            <li>Acompañamiento cercano del equipo</li>
+            <li data-i18n="plans.founderItem1">Todo lo del plan mensual</li>
+            <li data-i18n="plans.founderItem2">Acompañamiento cercano del equipo</li>
           </ul>
-          <a href="#contacto" class="btn btn-accent">Unirme como fundador</a>
+          <a href="#contacto" class="btn btn-accent" data-i18n="plans.join">Unirme como fundador</a>
         </article>
       </div>
     </div>
@@ -280,41 +318,41 @@
   <section class="section section-alt" id="testimonios">
     <div class="container">
       <div class="section-heading">
-        <p class="eyebrow">— Voces que guían el diseño</p>
-        <h2>Lo que buscan resolver nuestros usuarios</h2>
+        <p class="eyebrow" data-i18n="testimonials.eyebrow">— Voces que guían el diseño</p>
+        <h2 data-i18n="testimonials.title">Lo que buscan resolver nuestros usuarios</h2>
       </div>
 
       <div class="grid grid-3">
         <figure class="testimonial-card">
           <span class="quote-mark quote-blue" aria-hidden="true">“</span>
-          <blockquote>Ahora programo el mantenimiento antes de que se convierta en una avería en ruta.</blockquote>
+          <blockquote data-i18n="testimonials.quote1">Ahora programo el mantenimiento antes de que se convierta en una avería en ruta.</blockquote>
           <figcaption class="testimonial-author">
             <span class="avatar avatar-blue small"></span>
             <span>
-              <span class="author-name">Nombre Apellido</span>
-              <span class="author-role">Jefe de flota</span>
+              <span class="author-name" data-i18n="testimonials.name">Nombre Apellido</span>
+              <span class="author-role" data-i18n="testimonials.role1">Jefe de flota</span>
             </span>
           </figcaption>
         </figure>
         <figure class="testimonial-card">
           <span class="quote-mark quote-green" aria-hidden="true">“</span>
-          <blockquote>Reportar una falla con foto me toma segundos y deja constancia de que avisé a tiempo.</blockquote>
+          <blockquote data-i18n="testimonials.quote2">Reportar una falla con foto me toma segundos y deja constancia de que avisé a tiempo.</blockquote>
           <figcaption class="testimonial-author">
             <span class="avatar avatar-green small"></span>
             <span>
-              <span class="author-name">Nombre Apellido</span>
-              <span class="author-role">Conductor de flota</span>
+              <span class="author-name" data-i18n="testimonials.name">Nombre Apellido</span>
+              <span class="author-role" data-i18n="testimonials.role2">Conductor de flota</span>
             </span>
           </figcaption>
         </figure>
         <figure class="testimonial-card">
           <span class="quote-mark quote-orange" aria-hidden="true">“</span>
-          <blockquote>El semáforo de severidad me dice de un vistazo qué unidad atender primero.</blockquote>
+          <blockquote data-i18n="testimonials.quote3">El semáforo de severidad me dice de un vistazo qué unidad atender primero.</blockquote>
           <figcaption class="testimonial-author">
             <span class="avatar avatar-orange small"></span>
             <span>
-              <span class="author-name">Nombre Apellido</span>
-              <span class="author-role">Empresa de transporte</span>
+              <span class="author-name" data-i18n="testimonials.name">Nombre Apellido</span>
+              <span class="author-role" data-i18n="testimonials.role3">Empresa de transporte</span>
             </span>
           </figcaption>
         </figure>
@@ -327,57 +365,57 @@
     <div class="container">
       <div class="section-heading">
         <p class="eyebrow">— FAQ</p>
-        <h2>Resolvemos tus dudas</h2>
+        <h2 data-i18n="faq.title">Resolvemos tus dudas</h2>
       </div>
 
       <div class="faq-list">
         <div class="faq-item open">
           <button class="faq-question" aria-expanded="true">
-            <span>¿FleetCare es gratuito?</span>
+            <span data-i18n="faq.q1">¿FleetCare es gratuito?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-answer">
-            <p>Ofrecemos una demo sin costo. Los planes pagos se cobran por suscripción mensual según el número de vehículos de tu flota.</p>
+            <p data-i18n="faq.a1">Ofrecemos una demo sin costo. Los planes pagos se cobran por suscripción mensual según el número de vehículos de tu flota.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            <span>¿Cómo empiezo a usar FleetCare?</span>
+            <span data-i18n="faq.q2">¿Cómo empiezo a usar FleetCare?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-answer">
-            <p>Solicita una demo y nuestro equipo te ayudará a registrar tu flota: cada unidad con su placa, modelo y kilometraje inicial. Luego tus conductores ya pueden completar el checklist de salida desde su celular.</p>
+            <p data-i18n="faq.a2">Solicita una demo y nuestro equipo te ayudará a registrar tu flota: cada unidad con su placa, modelo y kilometraje inicial. Luego tus conductores ya pueden completar el checklist de salida desde su celular.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            <span>¿Funciona con conectividad limitada en ruta?</span>
+            <span data-i18n="faq.q3">¿Funciona con conectividad limitada en ruta?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-answer">
-            <p>El checklist y el reporte de fallas están pensados para completarse en pocos segundos, de modo que el conductor pueda registrarlos incluso con señal limitada antes de salir a ruta.</p>
+            <p data-i18n="faq.a3">El checklist y el reporte de fallas están pensados para completarse en pocos segundos, de modo que el conductor pueda registrarlos incluso con señal limitada antes de salir a ruta.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            <span>¿Cómo prioriza FleetCare las alertas?</span>
+            <span data-i18n="faq.q4">¿Cómo prioriza FleetCare las alertas?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-answer">
-            <p>Cada unidad se clasifica con un semáforo de severidad — bueno, alerta o crítico — según su kilometraje, los servicios próximos a vencer y las fallas reportadas, para que atiendas primero la más urgente.</p>
+            <p data-i18n="faq.a4">Cada unidad se clasifica con un semáforo de severidad — bueno, alerta o crítico — según su kilometraje, los servicios próximos a vencer y las fallas reportadas, para que atiendas primero la más urgente.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            <span>¿Mis datos están seguros?</span>
+            <span data-i18n="faq.q5">¿Mis datos están seguros?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-answer">
-            <p>La información de tu flota solo es accesible para los usuarios autorizados de tu cuenta, y la usamos únicamente para calcular el mantenimiento de tus unidades.</p>
+            <p data-i18n="faq.a5">La información de tu flota solo es accesible para los usuarios autorizados de tu cuenta, y la usamos únicamente para calcular el mantenimiento de tus unidades.</p>
           </div>
         </div>
       </div>
@@ -388,47 +426,47 @@
   <section class="section section-alt" id="contacto">
     <div class="container contact-inner">
       <div class="contact-form-wrap">
-        <p class="eyebrow">— Solicita una demo</p>
-        <h2>Escríbenos</h2>
+        <p class="eyebrow" data-i18n="contact.eyebrow">— Solicita una demo</p>
+        <h2 data-i18n="contact.title">Escríbenos</h2>
 
         <form id="contact-form" novalidate>
           <div class="form-row">
             <div class="form-field">
-              <label for="firstname">Nombre</label>
+              <label for="firstname" data-i18n="contact.firstname">Nombre</label>
               <input type="text" id="firstname" name="firstname" autocomplete="given-name" required>
               <span class="field-error"></span>
             </div>
             <div class="form-field">
-              <label for="lastname">Apellido</label>
+              <label for="lastname" data-i18n="contact.lastname">Apellido</label>
               <input type="text" id="lastname" name="lastname" autocomplete="family-name" required>
               <span class="field-error"></span>
             </div>
           </div>
 
           <div class="form-field">
-            <label for="email">Correo electrónico</label>
+            <label for="email" data-i18n="contact.email">Correo electrónico</label>
             <input type="email" id="email" name="email" autocomplete="email" required>
             <span class="field-error"></span>
           </div>
 
           <div class="form-field">
-            <label for="company">Empresa de transporte</label>
+            <label for="company" data-i18n="contact.company">Empresa de transporte</label>
             <input type="text" id="company" name="company" autocomplete="organization" required>
             <span class="field-error"></span>
           </div>
 
           <div class="form-field">
-            <label for="message">Mensaje</label>
+            <label for="message" data-i18n="contact.message">Mensaje</label>
             <textarea id="message" name="message" rows="4" required></textarea>
             <span class="field-error"></span>
           </div>
 
           <label class="checkbox-field">
             <input type="checkbox" id="terms" name="terms" required>
-            Acepto los términos y condiciones
+            <span data-i18n="contact.terms">Acepto los términos y condiciones</span>
           </label>
 
-          <button type="submit" class="btn btn-primary">Solicitar demo</button>
+          <button type="submit" class="btn btn-primary" data-i18n="cta.demo">Solicitar demo</button>
 
           <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
         </form>
@@ -440,7 +478,7 @@
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#1E5AA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
           </div>
           <div>
-            <h3>Correo</h3>
+            <h3 data-i18n="contact.mail">Correo</h3>
             <p>contacto@fleetcare.pe</p>
           </div>
         </div>
@@ -458,8 +496,8 @@
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#E8963D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14.5"></polyline></svg>
           </div>
           <div>
-            <h3>Horario</h3>
-            <p>Lun–Vie: 9am–6pm</p>
+            <h3 data-i18n="contact.hours">Horario</h3>
+            <p data-i18n="contact.hoursValue">Lun–Vie: 9am–6pm</p>
           </div>
         </div>
         <div class="info-item">
@@ -467,8 +505,8 @@
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#1E5AA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><line x1="3" y1="12" x2="21" y2="12"></line><path d="M12 3 C16 7 16 17 12 21 C8 17 8 7 12 3 Z"></path></svg>
           </div>
           <div>
-            <h3>Ubicación</h3>
-            <p>Lima, Perú</p>
+            <h3 data-i18n="contact.location">Ubicación</h3>
+            <p data-i18n="contact.locationValue">Lima, Perú</p>
           </div>
         </div>
       </div>
@@ -479,11 +517,11 @@
   <section class="section section-cta">
     <div class="container">
       <div class="cta-box">
-        <h2>Empieza a anticipar el mantenimiento de tu flota</h2>
-        <p>Agenda una demo con nuestro equipo. Sin tarjeta de crédito.</p>
+        <h2 data-i18n="ctaBox.title">Empieza a anticipar el mantenimiento de tu flota</h2>
+        <p data-i18n="ctaBox.text">Agenda una demo con nuestro equipo. Sin tarjeta de crédito.</p>
         <div class="cta-actions">
-          <a href="app/index.html#/login" class="btn btn-outline btn-inverse">Iniciar sesión</a>
-          <a href="#contacto" class="btn btn-accent">Solicitar demo</a>
+          <a href="app/index.html#/login" class="btn btn-outline btn-inverse" data-i18n="cta.login">Iniciar sesión</a>
+          <a href="#contacto" class="btn btn-accent" data-i18n="cta.demo">Solicitar demo</a>
         </div>
       </div>
     </div>
@@ -495,42 +533,43 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#top" class="logo logo-light" aria-label="FleetCare - inicio">
+        <a href="#top" class="logo logo-light" aria-label="FleetCare - inicio" data-i18n-aria="header.homeAria">
           <img class="logo-img logo-img-sm" src="img/fleetcare-logo-128.png" alt="" width="34" height="34">
           <span>FleetCare</span>
         </a>
-        <p>Mantenimiento preventivo y telemetría para flotas de carga ligera.</p>
+        <p data-i18n="footer.tagline">Mantenimiento preventivo y telemetría para flotas de carga ligera.</p>
       </div>
 
       <div class="footer-col">
-        <h3>Producto</h3>
-        <a href="#producto">Funcionalidades</a>
-        <a href="#como-funciona">Cómo funciona</a>
-        <a href="#planes">Planes</a>
+        <h3 data-i18n="footer.product">Producto</h3>
+        <a href="#producto" data-i18n="footer.features">Funcionalidades</a>
+        <a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a>
+        <a href="#planes" data-i18n="nav.plans">Planes</a>
       </div>
 
       <div class="footer-col">
-        <h3>Empresa</h3>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#equipo">Equipo</a>
-        <a href="#contacto">Contacto</a>
+        <h3 data-i18n="footer.company">Empresa</h3>
+        <a href="#nosotros" data-i18n="nav.about">Nosotros</a>
+        <a href="#equipo" data-i18n="nav.team">Equipo</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
       </div>
 
       <div class="footer-col">
         <h3>Legal</h3>
-        <a href="#">Términos</a>
-        <a href="#">Privacidad</a>
-        <a href="#">Reclamaciones</a>
+        <a href="#" data-i18n="footer.terms">Términos</a>
+        <a href="#" data-i18n="footer.privacy">Privacidad</a>
+        <a href="#" data-i18n="footer.claims">Reclamaciones</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 FleetCare. Todos los derechos reservados.</p>
-      <p>Desarrollado por Team Track · UPC</p>
+      <p data-i18n="footer.rights">© 2026 FleetCare. Todos los derechos reservados.</p>
+      <p data-i18n="footer.credit">Desarrollado por Team Track · UPC</p>
     </div>
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

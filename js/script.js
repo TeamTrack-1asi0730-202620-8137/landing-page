@@ -2,6 +2,7 @@
 const header = document.getElementById('header');
 const menuToggle = document.getElementById('menu-toggle');
 const mainNav = document.getElementById('main-nav');
+const t = window.FleetCareI18n.t;
 
 menuToggle.addEventListener('click', () => {
   const isOpen = header.classList.toggle('nav-open');
@@ -38,12 +39,19 @@ document.querySelectorAll('.faq-item').forEach((item) => {
 // Demo request form validation + simulated submit
 const form = document.getElementById('contact-form');
 const feedback = document.getElementById('form-feedback');
+let feedbackKey = null;
 
 function setError(field, message) {
   const wrapper = field.closest('.form-field');
   const errorEl = wrapper ? wrapper.querySelector('.field-error') : null;
   if (wrapper) wrapper.classList.toggle('has-error', Boolean(message));
   if (errorEl) errorEl.textContent = message || '';
+}
+
+function setFeedback(key, type) {
+  feedbackKey = key;
+  feedback.textContent = key ? t(key) : '';
+  feedback.className = key ? `form-feedback ${type}` : 'form-feedback';
 }
 
 function validateForm() {
@@ -53,7 +61,7 @@ function validateForm() {
 
   [firstname, lastname, company].forEach((field) => {
     if (!field.value.trim()) {
-      setError(field, 'Este campo es obligatorio.');
+      setError(field, t('required'));
       isValid = false;
     } else {
       setError(field, '');
@@ -62,25 +70,24 @@ function validateForm() {
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email.value.trim()) {
-    setError(email, 'Este campo es obligatorio.');
+    setError(email, t('required'));
     isValid = false;
   } else if (!emailPattern.test(email.value.trim())) {
-    setError(email, 'Ingresa un correo válido.');
+    setError(email, t('invalidEmail'));
     isValid = false;
   } else {
     setError(email, '');
   }
 
   if (!message.value.trim()) {
-    setError(message, 'Escribe tu mensaje.');
+    setError(message, t('messageRequired'));
     isValid = false;
   } else {
     setError(message, '');
   }
 
   if (!terms.checked) {
-    feedback.textContent = 'Debes aceptar los términos y condiciones.';
-    feedback.className = 'form-feedback error';
+    setFeedback('termsRequired', 'error');
     isValid = false;
   }
 
@@ -91,14 +98,16 @@ form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   if (!validateForm()) {
-    if (form.terms.checked) {
-      feedback.textContent = 'Revisa los campos marcados en rojo.';
-      feedback.className = 'form-feedback error';
-    }
+    if (form.terms.checked) setFeedback('checkFields', 'error');
     return;
   }
 
-  feedback.textContent = '¡Gracias! Recibimos tu solicitud. Te contactaremos pronto para agendar tu demo.';
-  feedback.className = 'form-feedback success';
+  setFeedback('success', 'success');
   form.reset();
+});
+
+// Re-translate visible validation messages when the language changes
+document.addEventListener('languagechange', () => {
+  if (form.querySelector('.form-field.has-error')) validateForm();
+  if (feedbackKey) feedback.textContent = t(feedbackKey);
 });
