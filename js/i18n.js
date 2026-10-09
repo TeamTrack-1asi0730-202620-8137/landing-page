@@ -25,7 +25,8 @@
       },
       cta: {
         login: 'Sign in',
-        demo: 'Request a demo'
+        demo: 'Request a demo',
+        tryDemo: 'Try the demo'
       },
       hero: {
         badge: 'New · Preventive maintenance SaaS',
