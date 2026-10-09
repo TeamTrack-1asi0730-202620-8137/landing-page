@@ -342,13 +342,7 @@ h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; }
 .fact-source { color: var(--color-text-faint); font-size: 14px; margin-top: auto; padding-top: 4px; }
 
 /* Team */
-.team {
-  scroll-margin-top: var(--header-height);
-  border-top: 1px solid var(--color-border);
-  margin-top: 56px;
-  padding-top: 56px;
-}
-.team .section-heading { margin-bottom: 40px; }
+#equipo .section-heading { margin-bottom: 40px; }
 .team-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
